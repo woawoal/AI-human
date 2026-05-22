@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchoolBridge — UI/UX 디자인 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+    background: #F4F6FF; color: #1E1B4B;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; padding: 40px 20px; gap: 32px;
+  }
+  .logo { text-align: center; }
+  .logo-mark {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: linear-gradient(135deg, #4F46E5, #7C3AED);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px; box-shadow: 0 8px 24px rgba(79,70,229,.25);
+  }
+  .logo-mark svg { color: white; }
+  .logo h1 { font-size: 24px; font-weight: 800; color: #1E1B4B; }
+  .logo p  { font-size: 13px; color: #6B7280; margin-top: 4px; }
+  .cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; max-width: 760px; }
+  .card {
+    background: white; border-radius: 16px; padding: 24px 28px;
+    box-shadow: 0 4px 14px rgba(79,70,229,.09), 0 1px 3px rgba(0,0,0,.05);
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 10px; width: 220px;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,.15); }
+  .card-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card-icon.parent  { background: #EEF2FF; color: #4F46E5; }
+  .card-icon.teacher { background: #F5F3FF; color: #7C3AED; }
+  .card-icon.demo    { background: #FFF7ED; color: #C2410C; }
+  .card-title { font-size: 15px; font-weight: 700; }
+  .card-desc  { font-size: 12px; color: #6B7280; line-height: 1.5; }
+  .card-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    width: fit-content;
+  }
+  .card-tag.parent  { background: #EEF2FF; color: #4F46E5; }
+  .card-tag.teacher { background: #F5F3FF; color: #7C3AED; }
+  .card-tag.demo    { background: #FFF7ED; color: #C2410C; }
+  .footer { font-size: 11px; color: #9CA3AF; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <div class="logo-mark">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+      <path d="M12 3C9.5 6.5 9 8.5 9 12s.5 5.5 3 9M12 3c2.5 3.5 3 5.5 3 9s-.5 5.5-3 9M3 12h18"
+        stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </div>
+  <h1>SchoolBridge</h1>
+  <p>가정통신문 AI 번역 서비스 — UI/UX 디자인 시안</p>
+</div>
+
+<div class="cards">
+
+  <a class="card" href="parent.html">
+    <div class="card-icon parent">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M5 20a7 7 0 0114 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-title">학부모 앱</div>
+    <div class="card-desc">6화면 흐름 — 통신문 수신 · AI 번역 · 체크리스트 · 일정 · 회신</div>
+    <span class="card-tag parent">6 screens</span>
+  </a>
+
+  <a class="card" href="teacher.html">
+    <div class="card-icon teacher">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-title">선생님 앱</div>
+    <div class="card-desc">5화면 흐름 — HWP/PDF 업로드 · 발송 전 미리보기 · 회신 현황</div>
+    <span class="card-tag teacher">5 screens</span>
+  </a>
+
+  <a class="card" href="demo/index.html">
+    <div class="card-icon demo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="card-title">심사용 데모</div>
+    <div class="card-desc">인터랙티브 라이브 데모 — 공모전 심사위원용</div>
+    <span class="card-tag demo">interactive</span>
+  </a>
+
+</div>
+
+<div class="footer">
+  SchoolBridge · 2026 사회보장정보 창업경진대회 · KoELECTRA · KcELECTRA · NLLB-200 · Edge-TTS
+</div>
+
+</body>
+</html>
