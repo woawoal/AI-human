@@ -1,0 +1,7 @@
+git add .
+git commit -m "
+
+git checkout dev && git pull origin dev --no-edit
+git checkout feature/yunjeong-extraction-v5 && git merge dev --no-edit
+
+git push -u origin feature/yunjeong-extraction-v5
